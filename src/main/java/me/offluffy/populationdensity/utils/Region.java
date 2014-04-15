@@ -416,6 +416,9 @@ public class Region {
         //build a glowpost in the center
         for (int y1 = y; y1 <= y + 3; y1++)
             ConfigData.managedWorld.getBlockAt(x, y1, z).setTypeIdAndData(Material.GLOWSTONE.getId(), (byte) 0, false);
+        //build a larger post above the sign so players can find it easier
+        for (int y2 = y + 7; y2 <= y + 84; y2++)
+            ConfigData.managedWorld.getBlockAt(x, y2, z).setTypeIdAndData(Material.GLOWSTONE.getId(), (byte) 0, false);
         //build a stone platform
         for (int x1 = x - 2; x1 <= x + 2; x1++)
             for (int z1 = z - 2; z1 <= z + 2; z1++)
